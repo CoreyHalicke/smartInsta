@@ -1,14 +1,15 @@
 class SmartInsta::Posts
-  attr_accessor :post, :likes, :comments, :hashtags, :date, :username, :first_last_name
+  attr_accessor :posts, :likes, :comments, :hashtags, :dates, :username, :first_last_name, :post_links
 
   # @@all = []
 
   def initialize
-    @post = []
+    @posts = []
     @likes = []
     @comments = []
     @hashtags = []
-    @date = []
+    @dates = []
+    @post_links = []
     # pull_data(@insta_username)
     # @@all << self
   end
@@ -18,8 +19,12 @@ class SmartInsta::Posts
     @@profile_html = Nokogiri::HTML(open(profile))
   end
 
-  def grab_posts
+  def posts
+    #find post url
     post_url = "https://www.instagram.com/p/B1VF9xepNVe/"
+
+    @@post_html = Nokogiri::HTML(open(post_url))
+
   end
 
 end
