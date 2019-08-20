@@ -13,8 +13,7 @@ class SmartInsta::Posts
   end
 
   def pull_data(username)
-    quote_url = "https://www.instagram.com/#{username}/?hl=en"
-    @quote_doc = Nokogiri::HTML(open(quote_url))
+    profile = "https://www.instagram.com/#{username}/?hl=en"
+    @profile = Nokogiri::HTML(open(profile))
+    binding.pry
   end
-
-  

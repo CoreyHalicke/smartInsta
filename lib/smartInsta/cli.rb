@@ -31,22 +31,20 @@ class SmartInsta::CLI
       [5] Settings
 
     DOC
-
   end
 
   def main_menu
-    puts "main menu"
+    @posts = SmartInsta::Posts.new
     @menu_input = gets.strip.downcase
-    until @input = 'x'
-
-      case @input
+    until @menu_input == 'x'
+      case @menu_input
       when 'x'
       when '1'
       when '2'
       when '3'
       when '4'
       when '5'
-        
+
       end
     end
 
