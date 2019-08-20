@@ -22,9 +22,8 @@ class SmartInsta::Posts
   def posts
     #find post url
     post_url = "https://www.instagram.com/p/B1VF9xepNVe/"
-
     @@post_html = Nokogiri::HTML(open(post_url))
-
+    binding.pry
   end
 
 end
