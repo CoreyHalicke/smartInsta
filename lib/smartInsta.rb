@@ -1,6 +1,2 @@
-require "smartInsta/version"
-
-module SmartInsta
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./smartInsta/version"
+require_relative './smartInsta/cli'
