@@ -9,9 +9,9 @@ require_relative './smartInsta/posts'
 
 
 
-puts <<-DOC
+=begin
 git add --all
 git commit -m "building env"
 git push
 
-DOC
+=end

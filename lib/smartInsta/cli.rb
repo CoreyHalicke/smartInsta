@@ -35,6 +35,7 @@ class SmartInsta::CLI
 
   def main_menu
     @posts = SmartInsta::Posts.new
+    @posts.grab_posts
     binding.pry
     # @menu_input = gets.strip.downcase
     # until @menu_input == 'x'

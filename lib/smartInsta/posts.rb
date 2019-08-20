@@ -9,14 +9,17 @@ class SmartInsta::Posts
     @comments = []
     @hashtags = []
     @date = []
-
-
+    # pull_data(@insta_username)
     # @@all << self
   end
 
   def pull_data(username)
     profile = "https://www.instagram.com/#{username}/?hl=en"
-    @profile = Nokogiri::HTML(open(profile))
+    @@profile_html = Nokogiri::HTML(open(profile))
+  end
+
+  def grab_posts
+    post_url = "https://www.instagram.com/p/B1VF9xepNVe/"
   end
 
 end
