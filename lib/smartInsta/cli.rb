@@ -35,7 +35,9 @@ class SmartInsta::CLI
 
   def main_menu
     @posts = SmartInsta::Posts.new
-    @posts.posts
+    @posts.pull_data(@insta_username)
+    @posts.post
+
     # @menu_input = gets.strip.downcase
     # until @menu_input == 'x'
     #   case @menu_input
